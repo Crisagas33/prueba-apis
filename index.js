@@ -7,6 +7,9 @@ app.set('port', process.env.PORT || 3000);
 //Middlewares
 app.use(express.json());
 
+// pal front
+app.use(express.static('public'));
+
 //Routes
 app.use(require('./src/routes/empleados'));
 

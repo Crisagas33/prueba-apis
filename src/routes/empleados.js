@@ -6,10 +6,10 @@ const router = express.Router(); //Objeto para definir rutas en el server
 const mysqlConection = require('../database');
 
 //Ruta ver todos los empleados
-router.get('/', (req, res) => {
+router.get('/lista', (req, res) => {
     mysqlConection.query('SELECT * FROM tbempleados', (err, rows, fields) =>{
         if(!err){
-            res.json(rows); //Imprimse las filas 
+            res.json(rows); //Imprimse las filas
         }else{
             console.log(err) //Imprime error
         }
